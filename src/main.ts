@@ -16,7 +16,7 @@ async function bootstrap() {
     credentials: true,
   });
   app.enableShutdownHooks();
-  // app.use(helmet());
+  app.use(helmet());
   app.setGlobalPrefix('api');
 
   const config = new DocumentBuilder()
