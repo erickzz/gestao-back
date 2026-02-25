@@ -12,7 +12,7 @@ async function bootstrap() {
 
   app.useGlobalPipes(new ValidationPipe({ transform: true }));
   app.enableCors({
-    origin: [process.env.FRONTEND_URL],
+    origin: [process.env.FRONTEND_URL!.split(',')],
     credentials: true,
   });
   app.enableShutdownHooks();
